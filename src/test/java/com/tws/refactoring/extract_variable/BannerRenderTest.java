@@ -18,6 +18,32 @@ public class BannerRenderTest {
     }
 
     @Test
+    public void should_return_banner_when_platform_does_not_contains_mac(){
+        //when
+        BannerRender bannerRender = new BannerRender();
+
+        //given
+        String banner = bannerRender.renderBanner("Windows","IE");
+
+        //then
+        assertEquals("banner",banner);
+
+    }
+
+    @Test
+    public void should_return_banner_when_browser_does_not_contains_IE(){
+        //when
+        BannerRender bannerRender = new BannerRender();
+
+        //given
+        String banner = bannerRender.renderBanner("MAC","Chrome");
+
+        //then
+        assertEquals("banner",banner);
+
+    }
+
+    @Test
     public void should_return_banner_when_either_platform_contains_Mac_or_browser_contains_IE(){
         //when
         BannerRender bannerRender = new BannerRender();
@@ -29,5 +55,7 @@ public class BannerRenderTest {
         assertEquals("banner",banner);
 
     }
+
+
 
 }
