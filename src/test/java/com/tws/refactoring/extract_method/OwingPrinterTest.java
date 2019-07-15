@@ -1,11 +1,13 @@
 package com.tws.refactoring.extract_method;
 
+import com.tws.refactoring.extract_variable.BannerRender;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Objects;
 
 import static org.junit.Assert.*;
 
@@ -28,4 +30,6 @@ public class OwingPrinterTest {
 //        System.out.print("hello");
 //        assertEquals("hello", outContent.toString());
     }
+
+
 }
